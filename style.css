@@ -1,152 +1,139 @@
-/* ---------- RESET ---------- */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ---------- BASE ---------- */
+/* BASE */
 body {
   background: #f7f2e9;
   color: #1f1f1f;
   font-family: 'Playfair Display', serif;
-  line-height: 1.7;
-  letter-spacing: 0.2px;
+  line-height: 1.65;
 }
 
-/* subtle paper texture */
+/* PAPER TEXTURE */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   background: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
-  opacity: 0.25;
+  opacity: 0.22;
   pointer-events: none;
 }
 
-/* ---------- IMAGES ---------- */
+/* IMAGES */
 img {
   width: 100%;
   display: block;
   border-radius: 10px;
   filter: grayscale(100%);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
 
-img:hover {
-  transform: scale(1.015);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.35);
-}
-
-/* ---------- HEADER ---------- */
-.top-header {
+.img-caption {
   text-align: center;
-  padding: 40px 20px 25px;
-  border-bottom: 4px double #1f1f1f;
+  font-size: 13px;
+  font-style: italic;
+  margin-top: 8px;
+  opacity: 0.8;
 }
 
-.small-text {
-  font-size: 12px;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
+/* HEADER */
+.top-header {
+  padding: 25px 18px;
+  border-bottom: 3px double #000;
+  text-align: center;
 }
 
 .logo {
   font-family: 'UnifrakturCook', cursive;
-  font-size: 48px;
-  margin: 10px 0 15px;
+  font-size: 40px;
+  margin: 8px 0;
 }
 
-.badge {
-  display: inline-block;
+.badge, .pill {
   border: 2px solid #b59cff;
-  padding: 6px 16px;
+  padding: 4px 12px;
   border-radius: 999px;
   font-size: 12px;
-  margin-bottom: 10px;
 }
 
 .meta {
   display: flex;
   justify-content: space-between;
-  gap: 12px;
   flex-wrap: wrap;
   font-size: 13px;
 }
 
-.pill {
-  border: 2px solid #b59cff;
-  padding: 6px 14px;
-  border-radius: 999px;
-}
-
-/* ---------- HERO ---------- */
+/* HERO */
 .hero {
   text-align: center;
-  padding: 60px 20px;
-  border-bottom: 4px double #1f1f1f;
+  padding: 40px 18px;
+  border-bottom: 3px double #000;
 }
 
 .hero h2 {
-  font-size: 42px;
-  letter-spacing: 6px;
-  margin-bottom: 16px;
+  font-size: 34px;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
 }
 
 .subtitle {
   display: inline-block;
+  padding: 6px 18px;
   border: 2px solid #b59cff;
-  padding: 8px 26px;
   border-radius: 999px;
   font-style: italic;
-  margin-bottom: 35px;
+  margin-bottom: 10px;
 }
 
-/* graceful placeholder look if image missing */
-.hero img {
-  max-width: 900px;
-  margin: 0 auto;
+.hero-caption {
+  font-size: 13px;
+  opacity: 0.75;
+  margin-bottom: 18px;
 }
 
-/* ---------- SECTIONS ---------- */
+/* SECTIONS */
 section {
-  padding: 70px 20px;
-  border-bottom: 4px double #1f1f1f;
+  padding: 40px 18px;
+  border-bottom: 3px double #000;
 }
 
-/* ---------- TWO COLUMN ---------- */
-.two-col {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 35px;
+/* TWO COLUMN */
+.two-col,
+.letter-section,
+.fun-facts {
   max-width: 1100px;
   margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
 }
 
-/* ---------- BOXES ---------- */
+/* BOX */
 .box {
-  border: 2px solid #1f1f1f;
-  padding: 30px;
+  border: 2px solid #000;
+  padding: 20px;
   background: rgba(255,255,255,0.45);
 }
 
 .box h3 {
   text-align: center;
-  font-size: 22px;
-  margin-bottom: 22px;
-  border-bottom: 2px solid #1f1f1f;
-  padding-bottom: 12px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #000;
 }
 
-/* ---------- LISTS ---------- */
+/* LIST */
 ul {
   list-style: none;
 }
 
 li {
-  margin-bottom: 14px;
-  padding-left: 22px;
+  padding-left: 18px;
+  margin-bottom: 10px;
   position: relative;
 }
 
@@ -157,52 +144,24 @@ li::before {
   color: #b59cff;
 }
 
-/* ---------- LETTER ---------- */
-.letter-section {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 35px;
-  max-width: 1100px;
-  margin: auto;
-}
-
+/* LETTER */
 .letter {
   border: 2px solid #b59cff;
-  padding: 32px;
+  padding: 22px;
   background: rgba(255,255,255,0.55);
 }
 
-.letter h3 {
-  text-align: center;
-  font-size: 20px;
-  margin-bottom: 18px;
-}
-
-/* ---------- FUN FACTS ---------- */
-.fun-facts {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 35px;
-  max-width: 1100px;
-  margin: auto;
-}
-
+/* FUN FACTS */
 .fact-box {
   border: 2px solid #b59cff;
-  padding: 14px;
-  margin-bottom: 12px;
+  padding: 10px;
+  margin-bottom: 10px;
   text-align: center;
-  font-size: 14px;
   background: rgba(255,255,255,0.55);
 }
 
-.fact-box strong {
-  display: block;
-  margin-bottom: 6px;
-}
-
-/* ---------- MOBILE ---------- */
-@media (max-width: 900px) {
+/* MOBILE */
+@media (max-width: 850px) {
   .two-col,
   .letter-section,
   .fun-facts {
@@ -210,15 +169,6 @@ li::before {
   }
 
   .hero h2 {
-    font-size: 30px;
-    letter-spacing: 3px;
-  }
-
-  .logo {
-    font-size: 36px;
-  }
-
-  section {
-    padding: 50px 18px;
+    font-size: 26px;
   }
 }

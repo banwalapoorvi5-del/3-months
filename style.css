@@ -124,12 +124,27 @@ li::before {
   color: #b59cff;
 }
 
-/* LETTER */
 .letter {
   border: 2px solid #b59cff;
-  padding: 30px;
+  padding: 40px 45px;
   background: rgba(255,255,255,0.55);
+
+  /* text control */
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: left;
+
+  /* make it feel like a letter */
+  max-width: 620px;
+  margin: 0 auto;
 }
+
+.letter p {
+  margin-bottom: 0;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
 
 /* FUN FACTS */
 .fact-box {
@@ -156,3 +171,6 @@ li::before {
     font-size: 36px;
   }
 }
+
+
+
